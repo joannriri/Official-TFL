@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TheFabricsLab",
+    "\\TheFabricsLab\\Areas",
+    "\\TheFabricsLab\\Areas\\Identity",
+    "\\TheFabricsLab\\Views",
+    "\\TheFabricsLab\\Views\\Cart",
+    "\\TheFabricsLab\\Views\\Checkout",
+    "\\TheFabricsLab\\Views\\Home",
+    "\\TheFabricsLab\\Views\\Shared",
+    "\\TheFabricsLab\\Views\\Shop"
+  ],
+  "PreviewInSolutionExplorer": false
+}
