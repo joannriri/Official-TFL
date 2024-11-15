@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/Index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <title> TFL - HomePage</title>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/img/Photoshoot/Photoshoot.jpg" alt="Category 1">
+                <div class="carousel-caption">
+                    <h1>Genevieve Series</h1>
+                    <p>The Fabric Lab Presents</p>
+                    <a class="shop-button" asp-controller="Shop" asp-action="SeasonalGenevieve">Shop Here</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/Photoshoot/Genevieve.jpg" alt="Category 2">
+                <div class="carousel-caption">
+                    <h1>Genevieve Series</h1>
+                    <p>The Fabric Lab Presents</p>
+                    <a class="shop-button" asp-controller="Shop" asp-action="SeasonalGenevieve">Shop Here</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/Photoshoot/Qalbi.jpg" alt="Category 3">
+                <div class="carousel-caption">
+                    <h1>Qalbi Series</h1>
+                    <p>The Fabric Lab Presents</p>
+                    <a class="shop-button" asp-controller="Shop" asp-action="SeasonalQalbi">Shop Here</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        @* <div class="carousel-indicators">
+            <button onclick="goToSlide(0)" class="active"></button>
+            <button onclick="goToSlide(1)"></button>
+            <button onclick="goToSlide(2)"></button>
+        </div> *@
+    </div>
+    <!--Product Categories-->
+    <div class="product-categories">
+        <h2>Product Categories</h2>
+        <div class="category-container">
+            <a class="category-item" asp-controller="Shop" asp-action="Cotton">
+                <img src="/img/Photoshoot/blue flower.jpg" alt="Cotton">
+                <span class="category-text">Cotton</span>
+            </a>
+
+            <a class="category-item" asp-controller="Shop" asp-action="Exclusives">
+                <img src="/img/Photoshoot/Black Ribbon.JPG" alt="Exclusives">
+                <span class="category-text">Exclusives</span>
+            </a>
+            <a class="category-item" asp-controller="Shop" asp-action="SeasonalGenevieve">
+                <img src="/img/Photoshoot/Couquette.JPG" alt="Seasonal Shawls">
+                <span class="category-text">Seasonals</span>
+            </a>
+        </div>
+    </div>
+    <!--Style Catalogue-->
+    <div class="style-catalogue">
+        <h2>Style Catalogue</h2>
+        <div class="style-container">
+            <div class="style-item">
+                <a href="#">
+                    <img src="/img/Photoshoot/Style1.jpg" alt="Style 1">
+                    <span class="style-text">Style 1</span>
+                </a>
+            </div>
+            <div class="style-item">
+                <a href="#">
+                    <img src="/img/Photoshoot/Style2.jpg" alt="Style 2">
+                    <span class="style-text">Style 2</span>
+                </a>
+            </div>
+            <div class="style-item">
+                <a href="#">
+                    <img src="/img/Photoshoot/Style3.jpg" alt="Style 3">
+                    <span class="style-text">Style 3</span>
+                </a>
+            </div>
+            <div class="style-item">
+                <a href="#">
+                    <img src="/img/Photoshoot/Style4.jpg" alt="Style 4">
+                    <span class="style-text">Style 4</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Banner Section-->
+    <div class="banner-section">
+        <div class="banner-content">
+            <h1>The Fabrics Labs</h1>
+            <p>Where to find us</p>
+        </div>
+    </div>
+    <script src="/js/Index.js"></script>
+</body>
+</html>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
