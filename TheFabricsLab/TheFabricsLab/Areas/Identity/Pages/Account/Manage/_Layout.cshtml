@@ -1,0 +1,43 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout !=  null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+
+<style>
+    body{
+        background-color: #0C797C;
+    }
+    .manage-user-icon{
+        width: auto;
+        height: 60px;
+    }
+    h1{
+        color: white;
+    }
+</style>
+
+<br />
+<br />
+<h1><img class="manage-user-icon" src="/img/icons/User.png" alt="User" />&nbsp;&nbsp;Hi, User</h1>
+
+<div class="layout-text">
+    <br />
+    <div class="row layout-bg">
+        <div class="col-md-3">
+            <partial name="_ManageNav" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
