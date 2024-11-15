@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TheFabricsLabs</title>
+    <link rel="icon" href="~/img/tfl_logo.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TheFabricsLab.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .footer-links{
+            text-decoration: none;
+        }
+        .footer-links:hover{
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-logo mx-auto" asp-controller="Home" asp-action="Index"><img src="/img/tfl_logo.png" alt="logo" class="navbar-logo-img" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="SeasonalQalbi">New Arrivals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="SeasonalGenevieve">S.Genevieve</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="Cotton">Cotton</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="Exclusives">Exclusives</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+                    <!--right icon-->
+                    @* <div class="navbar-icons-container d-flex flex-column align-items-end ms-3">
+                        <div class="navbar-icons d-flex">
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Search">
+                                        <img src="/img/User.png" alt="userIcon" class="navbar-icon" />
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Search">
+                                        <img src="~/img/Search.png" alt="icon1" class="navbar-icon" />
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cart">
+                                        <img src="~/img/bag.png" alt="icon3" class="navbar-icon" />
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div> *@
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <div class="row">
+                <!--left-->
+                <div class="col-md-6 d-flex flex-column align-items-start">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="/img/tfl_logo.png" alt="logo" class="footer-logo" />
+                        <span>
+                            Elevate your wardrobe and express <br />
+                            your individuality with our unique styles.<br />
+                            Shop with us today!
+                        </span>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <a href="https://www.facebook.com/thefabrics.labs?mibextid=LQQJ4d" class="mr-3"><img src="/img/icons/fb.png" alt="fb" style="width: 24px; height: 24px;" /></a>&nbsp;
+                        <a href="https://www.instagram.com/thefabricslabs/?igsh=MXVwMGZyaHBmNjli#" class="mr-3"><img src="/img/icons/ig.png" alt="ig" style="width: 24px; height: 24px;" /></a>&nbsp;
+                        <a href="https://api.whatsapp.com/send?phone=6738911568" class="mr-3"><img src="/img/icons/message.png" alt="msg" style="width: 24px; height: 24px;" /></a>
+                    </div>
+                    <small class="copyright">&copy; 2024 - TheFabricsLab - <a class="footer-links" asp-controller="Home" asp-action="TermsOfService">Terms of Service</a> - <a class="footer-links" asp-controller="Home" asp-action="Privacy">Privacy Policy</a></small>
+                </div>
+                <!--right-->
+                <div class="col-md-6 d-flex">
+                    <div class="w-50 pe-3">
+                        <h5>Explore</h5>
+                        <ul class="list-unstyled">
+                            <li><a class="footer-links" asp-controller="Home" asp-action="Index">Home</a></li>                           
+                            <li><a class="footer-links" asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-50 d-flex flex-column">
+                        <h5>Shop</h5>
+                        <div class="d-flex justify-content-between">
+                            <div class="w-50">
+                                <ul class="list-unstyled">
+                                    <li><a class="footer-links" asp-controller="Shop" asp-action="SeasonalQalbi">New Arrival</a></li>
+                                    <li><a class="footer-links" asp-controller="Shop" asp-action="Cotton">Cotton</a></li>
+                                </ul>
+                            </div>
+                            <div class="w-50">
+                                <ul class="list-unstyled">
+                                    <li><a class="footer-links" asp-controller="Shop" asp-action="Exclusives">Exclusives</a></li>
+                                    <li><a class="footer-links" asp-controller="Shop" asp-action="SeasonalGenevieve">Seasonals</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
