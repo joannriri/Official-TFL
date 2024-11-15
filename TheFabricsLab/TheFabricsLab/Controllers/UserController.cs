@@ -183,7 +183,7 @@ namespace TheFabricsLab.Controllers
                 return RedirectToAction("Admin", "User");
             }
 
-            string imageFullPath = environment.WebRootPath + "/Catalog/" + product.ImageFile;
+            string imageFullPath = environment.WebRootPath + "/img/Catalog/" + product.ImageFile;
             System.IO.File.Delete(imageFullPath);
 
             context.Products.Remove(product);
