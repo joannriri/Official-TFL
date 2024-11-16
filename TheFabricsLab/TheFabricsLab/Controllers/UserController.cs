@@ -1,4 +1,4 @@
-﻿
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -149,14 +149,14 @@ namespace TheFabricsLab.Controllers
                 newFileName = DateTime.Now.ToString("yyyyMMddHHmmssfff");
                 newFileName += Path.GetExtension(productDto.ImageFile.FileName);
 
-                string imageFullPath = environment.WebRootPath + "/Catalog/" + newFileName;
+                string imageFullPath = environment.WebRootPath + "/img/Catalog/" + newFileName;
                 using (var stream = System.IO.File.Create(imageFullPath))
                 {
                     productDto.ImageFile.CopyTo(stream);
                 }
 
                 //delete old img
-                string oldImageFullPath = environment.WebRootPath + "/Catalog/" + product.ImageFile;
+                string oldImageFullPath = environment.WebRootPath + "/img/Catalog/" + product.ImageFile;
                 System.IO.File.Delete(oldImageFullPath);
             }
 
@@ -240,7 +240,7 @@ namespace TheFabricsLab.Controllers
 
             context.ProductVariants.Add(productVar);
             context.SaveChanges();
-            return RedirectToAction("Admin", "User");
+            return RedirectToAction("AdminVar", "User");
         }
 
         public IActionResult EditVar(int id)
@@ -289,14 +289,14 @@ namespace TheFabricsLab.Controllers
                 newFileName = DateTime.Now.ToString("yyyyMMddHHmmssfff");
                 newFileName += Path.GetExtension(productVarDto.ImageFile.FileName);
 
-                string imageFullPath = environment.WebRootPath + "/Catalog/" + newFileName;
+                string imageFullPath = environment.WebRootPath + "/img/Catalog/" + newFileName;
                 using (var stream = System.IO.File.Create(imageFullPath))
                 {
                     productVarDto.ImageFile.CopyTo(stream);
                 }
 
                 //delete old img
-                string oldImageFullPath = environment.WebRootPath + "/Catalog/" + productVar.ImageFile;
+                string oldImageFullPath = environment.WebRootPath + "/img/Catalog/" + productVar.ImageFile;
                 System.IO.File.Delete(oldImageFullPath);
             }
 
@@ -308,7 +308,7 @@ namespace TheFabricsLab.Controllers
             productVar.ImageFile = newFileName;
 
             context.SaveChanges();
-            return RedirectToAction("Admin", "User");
+            return RedirectToAction("AdminVar", "User");
 
         }
 
@@ -320,13 +320,13 @@ namespace TheFabricsLab.Controllers
                 return RedirectToAction("Admin", "User");
             }
 
-            string imageFullPath = environment.WebRootPath + "/Catalog/" + productVar.ImageFile;
+            string imageFullPath = environment.WebRootPath + "/img/Catalog/" + productVar.ImageFile;
             System.IO.File.Delete(imageFullPath);
 
             context.ProductVariants.Remove(productVar);
             context.SaveChanges(true);
 
-            return RedirectToAction("Admin", "User");
+            return RedirectToAction("AdminVar", "User");
         }
     }
 }
